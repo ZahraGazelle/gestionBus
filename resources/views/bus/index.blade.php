@@ -21,15 +21,16 @@
                             </tr>
                             </thead>
                             <tbody>
-                              @foreach($ticket as $item)
+                              @foreach($bus as $item)
                                   <tr>
                                       <th scope="row">{{$item->id}}</th>
                                       <th scope="row">{{$item->numBus}}</th>
                                       <th scope="row">{{$item->NumImmat}}</th>
                                       <th scope="row">{{$item->NumCartegrises}}</th>
                                       <td scope="col">
+                                          <a class="btn btn-warning"  href="{{ route('bus.show', ['id' => $item->id ]) }}">voir</a>
                                           <a class="btn btn-primary"  href="{{ route('bus.edit', ['id' => $item->id ]) }}">Editer</a>
-                                          <a class="btn btn-danger" href="{{ route('bus.destroy',['id' => $item->id ]) }}">Supprime</a>
+                                          <a onclick="return confirm('Voulez-vous Confirmer la Suppression ?')" class="btn btn-danger" href="{{ route('bus.destroy',['id' => $item->id ]) }}">Supprime</a>
                                       </td>
                                   </tr>
                                 @endforeach

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('Gestion de bus', 'Gestion de bus') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('Gestion Bus', 'Gestion Bus') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -49,21 +49,21 @@
                                 </li>
                             @endif
                         @else
-                            <!--li class="nav-link">
-                                <a class="nav-link" href="">Gestion des Clients</a>
+                            <li class="nav-link">
+                                <a class="nav-link" href="/client">Gestion des Clients</a>
                             </li>
 
                             <li class="nav-link">
-                                <a class="nav-link" href="">Gestion des Guichets</a>
+                                <a class="nav-link" href="/guichet">Gestion des Guichets</a>
                             </li>
 
                             <li class="nav-link">
-                                <a class="nav-link" href="">Gestion des Tickets</a>
+                                <a class="nav-link" href="/ticket">Gestion des Tickets</a>
                             </li>
 
                             <li class="nav-link">
-                                <a class="nav-link" href="">Gestion des Bus</a>
-                            </li-->
+                                <a class="nav-link" href="/bus">Gestion des Bus</a>
+                            </li>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

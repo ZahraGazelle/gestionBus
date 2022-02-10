@@ -29,7 +29,7 @@
                                     <td>{{$item->tel}}</td>
                                       <td scope="col">
                                           <a class="btn btn-primary"  href="{{ route('client.edit', ['id' => $item->id ]) }}">Editer</a>
-                                          <a class="btn btn-danger" href="{{ route('client.destroy',['id' => $item->id ]) }}">Supprime</a>
+                                          <a onclick="return confirm('Voulez-vous Confirmer la Suppression ?')" class="btn btn-danger" href="{{ route('client.destroy',['id' => $item->id ]) }}">Supprime</a>
                                       </td>
                                   </tr>
                                 @endforeach

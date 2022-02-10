@@ -27,7 +27,7 @@
                                       <th scope="row">{{$item->date}}</th>
                                       <td scope="col">
                                           <a class="btn btn-primary"  href="{{ route('ticket.edit', ['id' => $item->id ]) }}">Editer</a>
-                                          <a class="btn btn-danger" href="{{ route('ticket.destroy',['id' => $item->id ]) }}">Supprime</a>
+                                          <a onclick="return confirm('Voulez-vous Confirmer la Suppression ?')" class="btn btn-danger" href="{{ route('ticket.destroy',['id' => $item->id ]) }}">Supprime</a>
                                       </td>
                                   </tr>
                                 @endforeach

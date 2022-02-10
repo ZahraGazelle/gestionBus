@@ -43,9 +43,10 @@ class clientContoller extends Controller
         $client->nom = $request->nom;
         $client->prenom = $request->prenom;
         $client->tel = $request->tel;
+       // dd($client);
         $client->save();
         $title = "Ajouter de client";
-        return view('client.add',compact('title'));
+        return  redirect('/client');
     }
 
     /**

@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="col-2 p-2">
-                    <a class="btn btn-primary" href="{{ route('ticket.add') }}">Ajouter ticket</a>
+                    <a class="btn btn-primary" href="{{ route('guichet.add') }}">Ajouter ticket</a>
                 </div>
                 <div class="card">
                     <div class="card-header">{{$title}}</div>
@@ -20,14 +20,14 @@
                             </tr>
                             </thead>
                             <tbody>
-                              @foreach($ticket as $item)
+                              @foreach($guichet as $item)
                                   <tr>
                                       <th scope="row">{{$item->id}}</th>
                                       <th scope="row">{{$item->numero}}</th>
                                       <th scope="row">{{$item->date}}</th>
                                       <td scope="col">
                                           <a class="btn btn-primary"  href="{{ route('ticket.edit', ['id' => $item->id ]) }}">Editer</a>
-                                          <a class="btn btn-danger" href="{{ route('ticket.destroy',['id' => $item->id ]) }}">Supprime</a>
+                                          <a onclick="return confirm('Voulez-vous Confirmer la Suppression ?')" class="btn btn-danger" href="{{ route('ticket.destroy',['id' => $item->id ]) }}">Supprime</a>
                                       </td>
                                   </tr>
                                 @endforeach
